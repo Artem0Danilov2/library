@@ -1,23 +1,27 @@
-#ifndef BOOKS_H
-#define BOOKS_H
+#pragma once
 
 #include "Book.h"
 #include <vector>
+#include <optional>
 
 class Books {
 public:
 	Books() = default;
-	void addBook(std::shared_ptr<Book> book);
+	void addBook(Book book);
 	bool deleteBookByID(int id);
-	bool changeBookByID(int id, const std::string& title, const std::string& author, const std::string& info) const;
-	std::vector<std::shared_ptr<Book>> findBookByTitle(const std::string& title) const;
-	std::vector<std::shared_ptr<Book>> findBookByAuthor(const std::string& author) const;
-	std::shared_ptr<Book> findBookByID(int id) const;
-	std::vector<std::shared_ptr<Book>> findBookByInfo(const std::string& info) const;
-	std::vector<std::shared_ptr<Book>> findBook(const std::string& searchQuery) const;
+
+	bool changeBookByID(int id, const std::string& title, 
+						const std::string& author,
+						const std::string& info,
+						bool isAvailable);
+
+	std::vector<Book> findBookByTitle(const std::string& title) const;
+	std::vector<Book> findBookByAuthor(const std::string& author) const;
+	std::vector<Book> findBookByInfo(const std::string& info) const;
+	// find book by any matches: author, title, info
+	std::vector<Book> findBook(const std::string& searchQuery) const;
+
+	std::optional<Book> findBookByID(int id) const;
 private:
-	std::vector<std::shared_ptr<Book>> books;
+	std::vector<Book> books;
 };
-
-
-#endif // BOOKS_H
