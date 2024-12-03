@@ -1,0 +1,4 @@
+/home/daniil/Desktop/New_Daniil/build/CMakeFiles/BookTest.dir
+/home/daniil/Desktop/New_Daniil/build/CMakeFiles/test.dir
+/home/daniil/Desktop/New_Daniil/build/CMakeFiles/edit_cache.dir
+/home/daniil/Desktop/New_Daniil/build/CMakeFiles/rebuild_cache.dir

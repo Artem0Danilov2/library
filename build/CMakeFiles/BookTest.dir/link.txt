@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/BookTest.dir/Book.cpp.o CMakeFiles/BookTest.dir/gtest.cpp.o -o BookTest  -lpthread /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 
